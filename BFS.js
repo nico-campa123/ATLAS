@@ -8,6 +8,11 @@ const  aulas = [19477,19466,18565,18554,11421,
 const orientaciones = ['I', 'D', 'I', 'D', 'I', 'D', 'I', 'D', 'R', 'A', 'R', 'A', 'R', 'R', 'R']
 
 
+const adj = [];
+for (let i = 0; i < total_nodos; i++) {
+  adj[i] = new Array(4).fill(-1); // Or new Array(4).fill(0)
+}
+
 
 let counter = 0;
 
@@ -97,7 +102,7 @@ function bfs(start, end, totalNodes, rows, adj) {
         const path = [];
         let current = endNode;
         // Traverse backwards from the end node to the start node
-        while (current !== -1) {
+        while (current !== -1) { //si current = -1 es porque es el start
             path.push(current);
             current = previous[current];
         }
@@ -116,11 +121,7 @@ function bfs(start, end, totalNodes, rows, adj) {
     return finalPath;
 }
 
-
-
-
-
-
+console.log(bfs(aulas[0],aulas[1],total_nodos,))
 
 
 
