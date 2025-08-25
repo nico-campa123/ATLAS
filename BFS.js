@@ -1,6 +1,6 @@
 const mapa = []
-const rows = 100 //cambia
-const columns = 100
+const rows = 131    
+const columns = 152 //cambia
 const total_nodos = rows * columns
 const  aulas = [19477,19466,18565,18554,11421,
     11410,10509,10498,1887,1049,
